@@ -5,23 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="icons8-calculator-color-16.png">
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
+    
     <div class="container">
         <div class="calculator dark">
             <div class="theme-toggler active">
-                <i class="toggler-icon"></i>
+                <i class="toggler-icon" onclick="themeToggleBtn()"></i>
+                <!-- <i class="fa-solid fa-brightness toggler-icon"></i> -->
+            </div>
+            <div class="statusbar">
+                <p>14 : 25 : 35</p>
+                <div class="statusbar__right">
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-half"></i>
+                </div>
+                
             </div>
             <div class="display-screen">
-                <div id="display"></div>
+                <!-- <div id="display"></div> -->
+                <input type="text" placeholder="0" class="inputA">
             </div>
-            <div class="buttons">
-                <table>
+            <div class="buttons dark">
+                <button data-value="C" class="btn mainKey ac-key">C</button>
+                <button data-value="plus/minus" class="btn mainKey">+/-</button>
+                <button data-value="%" class="btn mainKey operatorKey">%</button>
+                <button data-value="/" class="btn mainKey operatorKey">/</button>
+                <button class="btn numKey">7</button>
+                <button class="btn numKey">8</button>
+                <button class="btn numKey">9</button>
+                <button data-value="*" class="btn mainKey operatorKey">*</button>
+                <button class="btn numKey">4</button>
+                <button class="btn numKey">5</button>
+                <button class="btn numKey">6</button>
+                <button data-value="-" class="btn mainKey operatorKey">-</button>
+                <button class="btn numKey">1</button>
+                <button class="btn numKey">2</button>
+                <button class="btn numKey">3</button>
+                <button data-value="+" class="btn mainKey operatorKey">+</button>
+                <button data-value="DEL" class="btn mainKey" id="backspace">DEL</button>
+                <button class="btn numKey">0</button>
+                <button class="btn numKey dot" data-number>.</button>
+                <button onclick="myResult()" class="btn result-key">=</button>
+                <!-- <table>
                     <tr>
                         <td><button class="btn-operator" id="clear">C</button></td>
                         <td><button class="btn-operator" id="/">&divide;</button></td>
                         <td><button class="btn-operator" id="*">&times;</button></td>
-                        <td><button class="btn-operator" id="backspace"></button></td>
+                        <td><button class="btn-operator" id="backspace"><i class="fa-solid fa-delete-left"></i></button></td>
                     </tr>
                     <tr>
                         <td><button class="btn-number" id="7">7</button></td>
@@ -46,9 +94,10 @@
                         <td><button class="btn-number" id="0">0</button></td>
                         <td><button class="btn-operator" id=")">)</button></td>
                     </tr>
-                </table>
+                </table> -->
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

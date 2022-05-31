@@ -1,0 +1,40 @@
+
+:root {
+    --bg-color: rgb(89,133,138);
+    --red-color: #fc4552;
+    --lightPink-color: #ffd5d8;
+    --lightPurple-color: rgb(233, 227, 254);
+    --darkBlue-color: rgb(86, 155, 228);
+    --lightBlue-color: rgb(229, 243, 254);
+    --black-color: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+    --darkPink-color: rgb(222, 146, 213);
+    --lightOrange-color: rgb(255, 240, 225);
+    --darkOrange-color: rgb(252, 171, 94);
+    --light-Gray-color:rgb(222, 222, 222);
+    --bottom-color:rgb(38,41,49);
+    
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 62.5%;
+    font-family: "Urbanist", "Roboto", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+  }
