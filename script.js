@@ -45,32 +45,33 @@ function minusPlus() {
   inputResult.value.includes == "+/-";
   inputResult.value *= -1;
 }
-
+// Decimal
+// let dotReset = true;
+// function decimal() {
+//   if(!inputResult.value.includes(".")){
+//     if(dotReset){
+//       if (inputResult.value != "") {
+//         inputResult.value += ".";
+//         dotReset = false;
+//       }
+//     }
+//   }
+// }
 let dotReset = true;
-// var but = e.target;
-function decimal(e) {
+function decimal() {
   if(inputResult.value.includes == "."){
-    if(dotReset){
-      if (inputResult.value != "") {
+    if(dotReset) {
         inputResult.value += ".";
         dotReset = false;
       }
     }
   }
-  // if (e.target.textContent == ".") {
-  //   if (dotReset) {
-  //     if (inputResult.value != "") {
-  //       inputResult.value += ".";
-  //       dotReset = false;
-  //     }
-  //   }
-  // }
-}
+
+
 // clear one by one
-// let maxAmount = 9;
 function clearOne(){
     if( inputResult.value.length >= 0){
-      inputResult.value = inputResult.value.substring(1);
+      inputResult.value = inputResult.value.slice(0, -1);
 
     }
     
@@ -93,6 +94,7 @@ const numberNine = document.querySelector(".number9");
 const numberZero = document.querySelector(".number0");
 const numberDot = document.querySelector(".numberdot");
 const numberEqual = document.querySelector(".numberequal");
+const result =document.querySelector(".inputA");
 let isDark = true;
 themeToggleBtn.onclick = () => {
   calculator.classList.toggle("dark");
@@ -111,7 +113,9 @@ themeToggleBtn.onclick = () => {
   numberNine.classList.toggle("active");
   numberZero.classList.toggle("active");
   numberDot.classList.toggle("active");
-  numberEqual.classList.toggle("active");
+  numberEqual.classList.toggle("active")
+  result.classList.toggle("dark");
+  result.classList.toggle("active");
 
   isDark = !isDark;
 };

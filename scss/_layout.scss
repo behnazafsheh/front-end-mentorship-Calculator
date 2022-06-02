@@ -50,12 +50,6 @@ body {
 .theme-toggler.active::before {
   background-color: rgb(113, 113, 113);;
 }
-.number7.active{
-  color: var(--white-color);
-}
-.number7::before{
-  color: var(--white-color);
-}
 .buttons.active{
   background-color: var(--bottom-color);
 }
@@ -130,10 +124,16 @@ button:hover {
   text-align: right;
   font-size: 3.5rem;
   background-color: transparent;
-  color: var(--white-color);
+  color: var(--darkOrange-color);
   margin: 3rem 0;
   word-wrap: break-word;
   word-break: break-all;
+}
+.inputA.dark{
+  color: #828282;
+}
+.inputA.active{
+  color: #828282;
 }
 .buttons {
   display: grid;
@@ -158,9 +158,11 @@ button:hover {
   p {
     // color: var(--white-color);
     margin: 2rem;
+    font-size: 1.5rem;
   }
   i {
     // color: var(--white-color);
     margin: 2rem;
+    font-size: 1.5rem;
   }
 }
