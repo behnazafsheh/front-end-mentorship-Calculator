@@ -44,8 +44,8 @@
                 <input type="text" placeholder="0" class="inputA">
             </div>
             <div class="buttons active" id="buttons">
-                <button data-value="C" class="btn mainKey ac-key">C</button>
-                <button data-value="plus/minus" class="btn mainKey">+/-</button>
+                <button data-value="C" class="btn mainKey ac-key" id="clear">C</button>
+                <button onclick="myDecimal()" data-value="plus/minus" class="btn mainKey">+/-</button>
                 <button data-value="%" class="btn mainKey operatorKey">%</button>
                 <button data-value="/" class="btn mainKey operatorKey">/</button>
                 <button class="btn numKey active number7">7</button>
@@ -63,7 +63,7 @@
                 <button data-value="DEL" class="btn mainKey" id="backspace">DEL</button>
                 <button class="btn numKey active number0">0</button>
                 <button class="btn numKey dot active numberdot" data-number>.</button>
-                <button onclick="myResult()" class="btn result-key numKey active numberequal">=</button>
+                <button onclick="myResult()" class="btn result-key numKey active numberequal" id="equal">=</button>
             </div>
         </div>
     </div>

@@ -20,6 +20,7 @@ numKeys.forEach((number) => {
   });
 });
 
+
 // shows number in input
 numKeys.forEach((el) => {
   el.addEventListener("click", () => {
@@ -40,6 +41,13 @@ operatorKeys.forEach((op) => {
 function myResult() {
   inputResult.value = eval(inputResult.value);
 }
+
+function myDecimal(){
+  inputResult.value.includes == "+/-";
+    inputResult.value *= -1;
+  
+}
+
 
 const themeToggleBtn = document.querySelector(".theme-toggler");
 const calculator = document.querySelector(".calculator");
