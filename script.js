@@ -10,16 +10,15 @@ const backspaceKey = document.querySelector(".backspace");
 let haveDot = false;
 
 //  type just one dot!
-numKeys.forEach((number) => {
-  number.addEventListener("click", (e) => {
-    if (e.target.textContent === "." && !haveDot) {
-      haveDot = true;
-    } else if (e.target.textContent === "." && haveDot) {
-      return;
-    }
-  });
-});
-
+// numKeys.forEach((number) => {
+//   number.addEventListener("click", (e) => {
+//     if (e.target.textContent === "." && !haveDot) {
+//       haveDot = true;
+//     } else if (e.target.textContent === "." && haveDot) {
+//       return;
+//     }
+//   });
+// });
 
 // shows number in input
 numKeys.forEach((el) => {
@@ -41,25 +40,53 @@ operatorKeys.forEach((op) => {
 function myResult() {
   inputResult.value = eval(inputResult.value);
 }
-
-function myDecimal(){
+// minus plus
+function minusPlus() {
   inputResult.value.includes == "+/-";
-    inputResult.value *= -1;
-  
+  inputResult.value *= -1;
 }
 
+let dotReset = true;
+// var but = e.target;
+function decimal(e) {
+  if(inputResult.value.includes == "."){
+    if(dotReset){
+      if (inputResult.value != "") {
+        inputResult.value += ".";
+        dotReset = false;
+      }
+    }
+  }
+  // if (e.target.textContent == ".") {
+  //   if (dotReset) {
+  //     if (inputResult.value != "") {
+  //       inputResult.value += ".";
+  //       dotReset = false;
+  //     }
+  //   }
+  // }
+}
+// clear one by one
+// let maxAmount = 9;
+function clearOne(){
+    if( inputResult.value.length >= 0){
+      inputResult.value = inputResult.value.substring(1);
 
+    }
+    
+}
+// light and dark mode
 const themeToggleBtn = document.querySelector(".theme-toggler");
 const calculator = document.querySelector(".calculator");
 const toggleIcon = document.querySelector(".toggler-icon");
 const allButton = document.querySelector(".buttons");
 const statusBar = document.querySelector(".statusbar");
-const numberOne =document.querySelector(".number1");
-const numberTwo =document.querySelector(".number2");
-const numberThree =document.querySelector(".number3");
-const numberFour =document.querySelector(".number4");
-const numberFive =document.querySelector(".number5");
-const numberSix =document.querySelector(".number6");
+const numberOne = document.querySelector(".number1");
+const numberTwo = document.querySelector(".number2");
+const numberThree = document.querySelector(".number3");
+const numberFour = document.querySelector(".number4");
+const numberFive = document.querySelector(".number5");
+const numberSix = document.querySelector(".number6");
 const numberSeven = document.querySelector(".number7");
 const numberEight = document.querySelector(".number8");
 const numberNine = document.querySelector(".number9");
