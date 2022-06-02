@@ -79,17 +79,45 @@ body {
   position: absolute;
   top: 60px;
   right: 30px;
-  color: #fff;
+  color: #717171;
   cursor: pointer;
   z-index: 1;
 }
 
 .theme-toggler.active {
-  color: #333;
+  color: #717171;
 }
 
 .theme-toggler.active::before {
+  background-color: #717171;
+}
+
+.btn.active {
+  color: var(--white-color);
+}
+
+.btn::before {
+  color: var(--white-color);
+}
+
+.buttons.active {
+  background-color: var(--bottom-color);
+}
+
+.buttons.active::before {
   background-color: #fff;
+}
+
+.buttons::before {
+  background-color: #fff;
+}
+
+.statusbar.active {
+  color: #717171;
+}
+
+.statusbar.active::before {
+  color: #717171;
 }
 
 .theme-toggler::before {
@@ -102,24 +130,6 @@ body {
   border-radius: 50%;
   background-color: #333;
   z-index: -1;
-}
-
-#display {
-  margin: 0 10px;
-  height: 150px;
-  width: auto;
-  max-width: 270px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 30px;
-  margin-bottom: 20px;
-  overflow-x: scroll;
-}
-
-#display::-webkit-scrollbar {
-  display: block;
-  height: 3px;
 }
 
 button {
@@ -137,37 +147,9 @@ button:hover {
   transform: scale(1.1);
 }
 
-button#equal {
-  height: 130px;
-}
-
 /* light theme */
 .calculator {
   background-color: var(--white-color);
-}
-
-.calculator #display {
-  color: #0a1e23;
-}
-
-.calculator button#clear {
-  background-color: #ffd5d8;
-  color: #fc4552;
-}
-
-.calculator button.btn-number {
-  background-color: #c3eaff;
-  color: #000000;
-}
-
-.calculator button.btn-operator {
-  background-color: #ffd0fb;
-  color: #f967f3;
-}
-
-.calculator button.btn-equal {
-  background-color: #adf9e7;
-  color: #000;
 }
 
 /* dark theme */
@@ -175,23 +157,12 @@ button#equal {
   background-color: #071115;
 }
 
-.calculator.dark #display {
-  color: #f8fafb;
+.buttons.dark {
+  background-color: #e4e4e4;
 }
 
-.calculator.dark button.btn-number {
-  background-color: #1b2f38;
-  color: #f8fafb;
-}
-
-.calculator.dark button.btn-operator {
-  background-color: #2e1f39;
-  color: #aa00a4;
-}
-
-.calculator.dark button.btn-equal {
-  background-color: #223323;
-  color: #ffffff;
+.numberKey.active {
+  color: #828282;
 }
 
 .display-screen {
@@ -224,7 +195,6 @@ button#equal {
 
 .btn {
   background-color: transparent;
-  color: var(--white-color);
 }
 
 .mainKey {
@@ -238,12 +208,10 @@ button#equal {
 }
 
 .statusbar p {
-  color: var(--white-color);
   margin: 2rem;
 }
 
 .statusbar i {
-  color: var(--white-color);
   margin: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
