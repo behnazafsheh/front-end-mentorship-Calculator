@@ -46,7 +46,7 @@
             <div class="buttons active" id="buttons">
                 <button data-value="C" class="btn mainKey ac-key" id="clear">C</button>
                 <button onclick="minusPlus()" data-value="plus/minus" class="btn mainKey">+/-</button>
-                <button data-value="%" class="btn mainKey operatorKey">%</button>
+                <button onclick="percentage()" data-value="%" class="btn mainKey operatorKey percent">%</button>
                 <button data-value="/" class="btn mainKey operatorKey">/</button>
                 <button class="btn numKey active number7">7</button>
                 <button class="btn numKey active number8">8</button>
@@ -62,7 +62,7 @@
                 <button data-value="+" class="btn mainKey operatorKey">+</button>
                 <button onclick="clearOne()" data-value="DEL" class="btn mainKey" id="backspace">DEL</button>
                 <button class="btn numKey active number0">0</button>
-                <button onclick="decimal()" class="btn numKey dot active numberdot">.</button>
+                <button onclick="decimal()" class="btn numKey dot active numberdot" id=".">.</button>
                 <button onclick="myResult()" class="btn result-key numKey active numberequal" id="equal">=</button>
             </div>
         </div>

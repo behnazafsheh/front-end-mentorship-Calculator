@@ -6,19 +6,7 @@ const numKeys = document.querySelectorAll(".numKey");
 const clearKey = document.querySelector(".ac-key");
 const operatorKeys = document.querySelectorAll(".operatorKey");
 const backspaceKey = document.querySelector(".backspace");
-
-let haveDot = false;
-
-//  type just one dot!
-// numKeys.forEach((number) => {
-//   number.addEventListener("click", (e) => {
-//     if (e.target.textContent === "." && !haveDot) {
-//       haveDot = true;
-//     } else if (e.target.textContent === "." && haveDot) {
-//       return;
-//     }
-//   });
-// });
+const percentKey = document.querySelector(".percent");
 
 // shows number in input
 numKeys.forEach((el) => {
@@ -46,36 +34,42 @@ function minusPlus() {
   inputResult.value *= -1;
 }
 // Decimal
+function decimal() {
+  inputResult.value.includes == ".";
+  console.log("test");
+  return;
+  
+}
 // let dotReset = true;
 // function decimal() {
-//   if(!inputResult.value.includes(".")){
-//     if(dotReset){
-//       if (inputResult.value != "") {
-//         inputResult.value += ".";
-//         dotReset = false;
-//       }
+//   if (inputResult.value.includes == ".") {
+//     if (dotReset) {
+//       inputResult.value += ".";
+//       dotReset = false;
 //     }
 //   }
 // }
-let dotReset = true;
-function decimal() {
-  if(inputResult.value.includes == "."){
-    if(dotReset) {
-        inputResult.value += ".";
-        dotReset = false;
-      }
-    }
-  }
 
 
 // clear one by one
-function clearOne(){
-    if( inputResult.value.length >= 0){
-      inputResult.value = inputResult.value.slice(0, -1);
-
-    }
-    
+function clearOne() {
+  if (inputResult.value.length >= 0) {
+    inputResult.value = inputResult.value.slice(0, -1);
+  }
 }
+
+// percentage
+function percentage(numKeys) {
+  
+  // return inputResult.value = (numKeys/100)*numKeys;
+  if(inputResult.value.includes == "%"){
+    inputResult.value = eval((inputResult.value*100) / inputResult.value);
+
+  }
+  
+}
+
+
 // light and dark mode
 const themeToggleBtn = document.querySelector(".theme-toggler");
 const calculator = document.querySelector(".calculator");
@@ -94,7 +88,7 @@ const numberNine = document.querySelector(".number9");
 const numberZero = document.querySelector(".number0");
 const numberDot = document.querySelector(".numberdot");
 const numberEqual = document.querySelector(".numberequal");
-const result =document.querySelector(".inputA");
+const result = document.querySelector(".inputA");
 let isDark = true;
 themeToggleBtn.onclick = () => {
   calculator.classList.toggle("dark");
@@ -113,7 +107,7 @@ themeToggleBtn.onclick = () => {
   numberNine.classList.toggle("active");
   numberZero.classList.toggle("active");
   numberDot.classList.toggle("active");
-  numberEqual.classList.toggle("active")
+  numberEqual.classList.toggle("active");
   result.classList.toggle("dark");
   result.classList.toggle("active");
 
